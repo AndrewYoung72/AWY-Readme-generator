@@ -52,13 +52,13 @@ inquirer.prompt([
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 const generateMarkdown = ({ title, descriiption, table, installation, usage, credits, license }) =>
-` ${process.argv[2]}\n
-  ${process.argv[3]}\n
-  ${process.argv[4]}\n
-  ${process.argv[5]}\n
-  ${process.argv[6]}\n
-  ${process.argv[7]}\n
-  ${process.argv[8]}\n`;
+` # ${process.argv[2]}\n
+  ## ${process.argv[3]}\n
+  ## ${process.argv[4]}\n
+  ## ${process.argv[5]}\n
+  ## ${process.argv[6]}\n
+  ## ${process.argv[7]}\n
+  ## ${process.argv[8]}\n`;
 
 // TODO: Create a function to initialize app
 // const init = () => {
