@@ -30,11 +30,11 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license == "Apache 2.0 License") {
-    return ""
+    return "https://opensource.org/osd"
   } else if (license == "Boost Software License 1.0") {
-    return ""
+    return "Summary not found"
   } else if (license == "BSD 3-Clause License") {
-    return ")"
+    return "https://opensource.org/osd"
   }
 }
 
@@ -48,10 +48,10 @@ const generateMarkdown = ({ title, description, installation, usage, credits, li
   ${description}\n 
 
 ## Table
-  [Installation](#installation)
-  [Usage](#usage)
-  [Credits](#credits)
-  [License](#lisence)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Installation
   ${installation}\n
@@ -62,18 +62,20 @@ const generateMarkdown = ({ title, description, installation, usage, credits, li
 ## Credits
   ${credits}\n 
 
-## Lisence
+## License
   ${license}\n
 
 ${renderLicenseBadge(license)}
+${renderLicenseLink(license)}
+${renderLicenseSection(license)}
 
 ## Tests
   ${tests}\n 
 
 ## Questions
   ${questions}\n 
-  ${email}\n
-  ${github}\n
+  Email: ${email}\n
+  Project Link: ${github}\n
 `;
 
 

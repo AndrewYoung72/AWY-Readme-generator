@@ -56,7 +56,7 @@ const questionPrompt = () => {
     {
       type: "input",
       name: "questions",
-      message:"Enter GitHub link to project as well as any images.",
+      message:"Enter GitHub user link.",
     },
     {
       type: "input",
@@ -66,7 +66,7 @@ const questionPrompt = () => {
     {
       type: "input",
       name: "github",
-      message:"Enter GitHub user link.",
+      message:"Enter GitHub project link.",
     },
 
   ])
