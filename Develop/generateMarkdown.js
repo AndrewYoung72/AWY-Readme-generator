@@ -48,7 +48,7 @@ ${renderLicenseBadge(license)}
 ## Description
   ${description}\n 
 
-## Table
+## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -62,13 +62,13 @@ ${renderLicenseBadge(license)}
 
 ## Credits
   ${credits}\n 
-  Andrew Young - awyimtb@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-andrew] [![GitHub][github-shield]][github-url-andrew]
+  
 
 ## License
   ${license}\n
 
-${renderLicenseLink(license)}
-${renderLicenseSection(license)}
+- ${renderLicenseLink(license)}
+- ${renderLicenseSection(license)}
 
 ## Tests
   ${tests}\n 
