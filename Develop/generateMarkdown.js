@@ -43,6 +43,7 @@ function renderLicenseSection(license) {
 
 const generateMarkdown = ({ title, description, installation, usage, credits, license, tests, questions, email, github }) =>
 ` # ${title}\n 
+${renderLicenseBadge(license)}
 
 ## Description
   ${description}\n 
@@ -61,11 +62,11 @@ const generateMarkdown = ({ title, description, installation, usage, credits, li
 
 ## Credits
   ${credits}\n 
+  Andrew Young - awyimtb@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-andrew] [![GitHub][github-shield]][github-url-andrew]
 
 ## License
   ${license}\n
 
-${renderLicenseBadge(license)}
 ${renderLicenseLink(license)}
 ${renderLicenseSection(license)}
 
