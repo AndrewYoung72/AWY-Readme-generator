@@ -2,55 +2,49 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-inquirer.prompt([
+
+
+
+const questionPrompt = () => {
+  return inquirer.prompt([
     {
       type: "input",
       name: "title",
-      messge: "What is the title of this project?",
+      message: "What is the title of this project?",
     },
     {
       type: "input",
       name: "description",
-      messge: "What was your motivation for the project, what does it solve?",
+      message: "What was your motivation for the project, what does it solve?",
     },
     {
       type: "input",
       name: "table",
-      messge: "List the table of contents for this project.",
+      message: "List the table of contents for this project.",
     },
     {
       type: "input",
       name: "installation",
-      messge: "What are the steps required to install the project?",
+      message: "What are the steps required to install the project?",
     },
     {
       type: "input",
       name: "usage",
-      messge: "Provide examples and instruction for use",
+      message: "Provide examples and instruction for use",
     },
     {
       type: "input",
       name: "credits",
-      messge: "List collaborators witrh links to GitHub profiles",
+      message: "List collaborators with links to GitHub profiles",
     },
     {
       type: "input",
       name: "license",
-      messge: "Is there a license?",
+      message: "Is there a license?",
     },
+  ])
+};
 
-])
-.then((answers) => {
-  const readmeContent = generateMarkdown(answers);
-
-  fs.writeFile('README.md', readmeContent, (err) =>
-    err ? console.log(err) : console.log('Successfully created index.html!')
-  );
-});
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 const generateMarkdown = ({ title, descriiption, table, installation, usage, credits, license }) =>
 ` # ${process.argv[2]}\n
   ## ${process.argv[3]}\n
@@ -59,6 +53,30 @@ const generateMarkdown = ({ title, descriiption, table, installation, usage, cre
   ## ${process.argv[6]}\n
   ## ${process.argv[7]}\n
   ## ${process.argv[8]}\n`;
+
+
+const init = () => {
+  questionPrompt()
+    // Use writeFileSync method to use promises instead of a callback function
+    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote to index.html'))
+    .catch((err) => console.error(err));
+};
+
+init();
+
+
+
+// TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
+// const generateMarkdown = ({ title, descriiption, table, installation, usage, credits, license }) =>
+// ` # ${process.argv[2]}\n
+//   ## ${process.argv[3]}\n
+//   ## ${process.argv[4]}\n
+//   ## ${process.argv[5]}\n
+//   ## ${process.argv[6]}\n
+//   ## ${process.argv[7]}\n
+//   ## ${process.argv[8]}\n`;
 
 // TODO: Create a function to initialize app
 // const init = () => {
@@ -71,4 +89,4 @@ const generateMarkdown = ({ title, descriiption, table, installation, usage, cre
 
 
 // Function call to initialize app
-init();
+// init();
