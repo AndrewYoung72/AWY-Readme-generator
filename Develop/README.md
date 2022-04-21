@@ -1,9 +1,8 @@
- # Title
-  Readme Generator
+ # Readme Generator
  
 
 ## Description
-  simple readme framework
+  Streamline Quality readme 
  
 
 ## Table
@@ -13,15 +12,15 @@
   [License](#lisence)
 
 ## Installation
-  not sure yet
+  coming soon
 
 
 ## Usage
-  coming soon
+  enter data and produce a readme
  
 
 ## Credits
-  not yet
+  coming soon
  
 
 ## Lisence
@@ -29,9 +28,9 @@
 
 
 ## Tests
-  NA
+  WIP
  
 
 ## Questions
-  no
+  https://github.com/AndrewYoung72/AWY-Readme-generator
  

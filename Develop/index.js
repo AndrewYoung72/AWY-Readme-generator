@@ -58,8 +58,7 @@ const questionPrompt = () => {
 };
 
 const generateMarkdown = ({ title, description, installation, usage, credits, license, tests, questions }) =>
-` # Title
-  ${title}\n 
+` # ${title}\n 
 
 ## Description
   ${description}\n 
