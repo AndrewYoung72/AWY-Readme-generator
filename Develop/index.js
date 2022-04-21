@@ -8,7 +8,7 @@ const fs = require('fs');
 const questionPrompt = () => {
   return inquirer.prompt([
     {
-      type: "input",
+      type: process.argv[2],
       name: "title",
       message: "What is the title of this project?",
     },
@@ -45,21 +45,29 @@ const questionPrompt = () => {
   ])
 };
 
-const generateMarkdown = ({ title, descriiption, table, installation, usage, credits, license }) =>
-` # ${process.argv[2]}\n
-  ## ${process.argv[3]}\n
-  ## ${process.argv[4]}\n
-  ## ${process.argv[5]}\n
-  ## ${process.argv[6]}\n
-  ## ${process.argv[7]}\n
-  ## ${process.argv[8]}\n`;
+const generateMarkdown = ({ title, description, table, installation, usage, credits, license }) =>
+` # Title
+  ${title}\n 
+  ## Description
+  ${description}\n 
+  ## Table
+  ${table}\n 
+  ## Installation
+  ${installation}\n
+  ## Usage
+  ${usage}\n 
+  ## Credits
+  ${credits}\n 
+  ## Lisence
+  ${license}\n 
+  `;
 
 
 const init = () => {
   questionPrompt()
     // Use writeFileSync method to use promises instead of a callback function
     .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
-    .then(() => console.log('Successfully wrote to index.html'))
+    .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
 
