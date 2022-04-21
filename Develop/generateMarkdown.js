@@ -1,25 +1,80 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+
+// "Apache 2.0 License",
+// "Boost Software License 1.0",
+// "BSD 3-Clause License",// TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license == "Apache 2.0 License") {
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+  } else if (license == "Boost Software License 1.0") {
+    return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+  } else if (license == "BSD 3-Clause License") {
+    return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license == "Apache 2.0 License") {
+    return "https://opensource.org/licenses/Apache-2.0"
+  } else if (license == "Boost Software License 1.0") {
+    return "https://www.boost.org/LICENSE_1_0.txt"
+  } else if (license == "BSD 3-Clause License") {
+    return "https://opensource.org/licenses/BSD-3-Clause"
+  }
+}
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license == "Apache 2.0 License") {
+    return ""
+  } else if (license == "Boost Software License 1.0") {
+    return ""
+  } else if (license == "BSD 3-Clause License") {
+    return ")"
+  }
+}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ## ${data.description}
-  ## ${data.table}
-  ## ${data.installation}
-  ## ${data.usage}
-  ## ${data.credits}
-  ## ${data.license}
+
+
+const generateMarkdown = ({ title, description, installation, usage, credits, license, tests, questions, email, github }) =>
+` # ${title}\n 
+
+## Description
+  ${description}\n 
+
+## Table
+  [Installation](#installation)
+  [Usage](#usage)
+  [Credits](#credits)
+  [License](#lisence)
+
+## Installation
+  ${installation}\n
+
+## Usage
+  ${usage}\n 
+
+## Credits
+  ${credits}\n 
+
+## Lisence
+  ${license}\n
+
+${renderLicenseBadge(license)}
+
+## Tests
+  ${tests}\n 
+
+## Questions
+  ${questions}\n 
+  ${email}\n
+  ${github}\n
 `;
-}
+
 
 module.exports = generateMarkdown;

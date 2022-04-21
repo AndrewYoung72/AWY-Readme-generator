@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
+const generateMarkdown = require("./generateMarkdown")
 
 
 const questionPrompt = () => {
@@ -38,9 +38,14 @@ const questionPrompt = () => {
       message: "List collaborators with links to GitHub profiles",
     },
     {
-      type: "input",
+      type: "list",
       name: "license",
-      message: "Is there a license?",
+      message: "Which license do you wnat for your project?",
+      choices: [
+        "Apache 2.0 License",
+        "Boost Software License 1.0",
+        "BSD 3-Clause License",
+      ]
     },
     {
       type: "input",
@@ -53,41 +58,19 @@ const questionPrompt = () => {
       name: "questions",
       message:"Enter GitHub link to project as well as any images.",
     },
+    {
+      type: "input",
+      name: "email",
+      message:"Enter your email address.",
+    },
+    {
+      type: "input",
+      name: "github",
+      message:"Enter GitHub user link.",
+    },
 
   ])
 };
-
-const generateMarkdown = ({ title, description, installation, usage, credits, license, tests, questions }) =>
-` # ${title}\n 
-
-## Description
-  ${description}\n 
-
-## Table
-  [Installation](#installation)
-  [Usage](#usage)
-  [Credits](#credits)
-  [License](#lisence)
-
-## Installation
-  ${installation}\n
-
-## Usage
-  ${usage}\n 
-
-## Credits
-  ${credits}\n 
-
-## Lisence
-  ${license}\n
-
-## Tests
-  ${tests}\n 
-
-## Questions
-  ${questions}\n 
-`;
-
 
 const init = () => {
   questionPrompt()

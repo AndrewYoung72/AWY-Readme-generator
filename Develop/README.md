@@ -1,8 +1,8 @@
- # Readme Generator
+ # dfgserg
  
 
 ## Description
-  Streamline Quality readme 
+  drgaerg
  
 
 ## Table
@@ -12,25 +12,31 @@
   [License](#lisence)
 
 ## Installation
-  coming soon
+  erg
 
 
 ## Usage
-  enter data and produce a readme
+  earg
  
 
 ## Credits
-  coming soon
+  asertg
  
 
 ## Lisence
-  not yet
+  Apache 2.0 License
 
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Tests
-  WIP
+  eragqer
  
 
 ## Questions
-  https://github.com/AndrewYoung72/AWY-Readme-generator
+  aergaqer
  
+  eqrgtqare
+
+  aqertgaqe
+
