@@ -8,7 +8,7 @@ const fs = require('fs');
 const questionPrompt = () => {
   return inquirer.prompt([
     {
-      type: process.argv[2],
+      type: "input",
       name: "title",
       message: "What is the title of this project?",
     },
@@ -42,25 +42,52 @@ const questionPrompt = () => {
       name: "license",
       message: "Is there a license?",
     },
+    {
+      type: "input",
+      name: "tests",
+      message: "Instructions for running a test.",
+    },
+
+    {
+      type: "input",
+      name: "questions",
+      message:"Enter GitHub link to project as well as any images.",
+    },
+
   ])
 };
 
-const generateMarkdown = ({ title, description, table, installation, usage, credits, license }) =>
+const generateMarkdown = ({ title, description, installation, usage, credits, license, tests, questions }) =>
 ` # Title
   ${title}\n 
-  ## Description
+
+## Description
   ${description}\n 
-  ## Table
-  ${table}\n 
-  ## Installation
+
+## Table
+  [Installation](#installation)
+  [Usage](#usage)
+  [Credits](#credits)
+  [License](#lisence)
+
+## Installation
   ${installation}\n
-  ## Usage
+
+## Usage
   ${usage}\n 
-  ## Credits
+
+## Credits
   ${credits}\n 
-  ## Lisence
-  ${license}\n 
-  `;
+
+## Lisence
+  ${license}\n
+
+## Tests
+  ${tests}\n 
+
+## Questions
+  ${questions}\n 
+`;
 
 
 const init = () => {
@@ -73,28 +100,3 @@ const init = () => {
 
 init();
 
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-// const generateMarkdown = ({ title, descriiption, table, installation, usage, credits, license }) =>
-// ` # ${process.argv[2]}\n
-//   ## ${process.argv[3]}\n
-//   ## ${process.argv[4]}\n
-//   ## ${process.argv[5]}\n
-//   ## ${process.argv[6]}\n
-//   ## ${process.argv[7]}\n
-//   ## ${process.argv[8]}\n`;
-
-// TODO: Create a function to initialize app
-// const init = () => {
-//   questions()
-//   .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
-//   .then(() => console.log('Successfully wrote to README.md'))
-//   .catch((err) => console.error(err));
-
-// }
-
-
-// Function call to initialize app
-// init();
