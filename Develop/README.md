@@ -1,45 +1,45 @@
- # AWY-Readme-generator
+ # your mom
  
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
 ## Description
-  To save time creating a quality readme for my projects.
+  nothing
  
 
-## Table
+## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
 
 ## Installation
-  none
+  secret knock
 
 
 ## Usage
-  coming soon
+  no! piss off!
  
 
 ## Credits
-  
+  no
  
-  Andrew Young - awyimtb@gmail.com [![LinkedIn][linkedin-shield]][linkedin-url-andrew] [![GitHub][github-shield]][github-url-andrew]
+  
 
 ## License
-  BSD 3-Clause License
+  Boost Software License 1.0
 
 
-https://opensource.org/licenses/BSD-3-Clause
-https://opensource.org/osd
+- License Link https://www.boost.org/LICENSE_1_0.txt
+- License Definition Summary not found
 
 ## Tests
-  none
+  no way
  
 
 ## Questions
-  [![GitHub][github-shield]][github-url-andrew]
+  not yet
  
-  Email: awyimtb@gmail.com
+  Email: soon
 
-  Project Link: https://github.com/AndrewYoung72/AWY-Readme-generator
+  Project Link: soon
 

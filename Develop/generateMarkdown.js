@@ -67,8 +67,8 @@ ${renderLicenseBadge(license)}
 ## License
   ${license}\n
 
-- ${renderLicenseLink(license)}
-- ${renderLicenseSection(license)}
+- License Link: ${renderLicenseLink(license)}
+- License Definition: ${renderLicenseSection(license)}
 
 ## Tests
   ${tests}\n 
