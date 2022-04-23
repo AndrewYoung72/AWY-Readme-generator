@@ -74,9 +74,9 @@ ${renderLicenseBadge(license)}
   ${tests}\n 
 
 ## Questions
-  ${questions}\n 
-  Email: ${email}\n
-  Project Link: ${github}\n
+- GitHub User Link: ${questions}\n 
+- Email: ${email}\n
+- GitHub Project Link: ${github}\n
 `;
 
 
