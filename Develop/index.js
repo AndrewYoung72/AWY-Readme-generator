@@ -40,7 +40,7 @@ const questionPrompt = () => {
     {
       type: "list",
       name: "license",
-      message: "Which license do you wnat for your project?",
+      message: "Choose a license for your project.",
       choices: [
         "Apache 2.0 License",
         "Boost Software License 1.0",
