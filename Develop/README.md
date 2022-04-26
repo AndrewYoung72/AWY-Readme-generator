@@ -1,9 +1,9 @@
- # your mom
+ # AWY-README-generator
  
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
-  nothing
+  generate sa form readme
  
 
 ## Table of Contents
@@ -13,33 +13,33 @@
   - [License](#license)
 
 ## Installation
-  secret knock
+  none
 
 
 ## Usage
-  no! piss off!
+  coming soon
  
 
 ## Credits
-  no
+  https://github.com/AndrewYoung72
  
   
 
 ## License
-  Boost Software License 1.0
+  Apache 2.0 License
 
 
-- License Link https://www.boost.org/LICENSE_1_0.txt
-- License Definition Summary not found
+- License Link: https://opensource.org/licenses/Apache-2.0
+- License Definition: https://opensource.org/osd
 
 ## Tests
-  no way
+  no test yet
  
 
 ## Questions
-  not yet
+- GitHub User Link: https://github.com/AndrewYoung72/AWY-Readme-generator
  
-  Email: soon
+- Email: awyimtb@gmail.com
 
-  Project Link: soon
+- GitHub Project Link: https://github.com/AndrewYoung72/AWY-Readme-generator
 
